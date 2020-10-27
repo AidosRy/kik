@@ -1,0 +1,38 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: qaidosp@gmail.com
+    password: alentai26
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kik
+    username: aidos
+    password: qweqwe26
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+#    show-sql: true
+  devtools:
+    restart:
+      poll-interval: 2s
+      quiet-period: 1s
